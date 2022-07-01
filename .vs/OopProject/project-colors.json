@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eb7fbf41-2c2c-4cd6-9071-b48b1d056b3a": {
+      "ProjectGuid": "eb7fbf41-2c2c-4cd6-9071-b48b1d056b3a",
+      "DisplayName": "OopProject",
+      "ColorIndex": 0
+    },
+    "647f5277-0e5c-462e-9fa2-4d3cad53ba5c": {
+      "ProjectGuid": "647f5277-0e5c-462e-9fa2-4d3cad53ba5c",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    },
+    "7dcca9fb-920e-4849-bde5-39a046003274": {
+      "ProjectGuid": "7dcca9fb-920e-4849-bde5-39a046003274",
+      "DisplayName": "LibraryBook",
+      "ColorIndex": 2
+    },
+    "c8165b5d-11a9-4e6b-80dc-b4e9eb496a6c": {
+      "ProjectGuid": "c8165b5d-11a9-4e6b-80dc-b4e9eb496a6c",
+      "DisplayName": "UnitTestProjectBook",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "9165fb68-0f4e-44fe-a6c8-254fe3469d8a": {
+      "ProjectGuid": "9165fb68-0f4e-44fe-a6c8-254fe3469d8a",
+      "DisplayName": "DS",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

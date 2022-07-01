@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="OopProject.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OopProject.Views"
+             DataContext="{Binding Source={StaticResource Locator}, Path=Login}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Enter Nickname" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox  Text="{Binding NicknameStr , Mode =TwoWay}" Width="80" Height="30" HorizontalAlignment="Right" ></TextBox>
+        <TextBlock Text="Enter Password" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"></TextBlock>
+        <TextBox Grid.Row="1" Text="{Binding PasswordStr , Mode =TwoWay}" Width="80" Height="30" HorizontalAlignment="Right" ></TextBox>
+        <Button x:Name="LoginButton" Command="{Binding LoginClickCommand}" Grid.Row="2" Content="Login"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="50" Height="30"></Button>
+    </Grid>
+</UserControl>

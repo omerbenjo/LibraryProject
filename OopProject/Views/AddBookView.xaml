@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="OopProject.Views.AddBookView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OopProject.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1050"
+             DataContext="{Binding Source={StaticResource Locator}, Path= AddBook}">
+
+    <Grid >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--<TextBlock Text="Enter Book ISBN:" FontSize="20" VerticalAlignment="Center" />
+        <TextBox Text="{Binding IsbnStr,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox" />-->
+
+        <TextBlock Text="Enter Book Name:" FontSize="20" VerticalAlignment="Center" Grid.Row="0"/>
+        <TextBox Text="{Binding NameStr,Mode=TwoWay}"  Grid.Row="0"/>
+
+        <TextBlock Text="Enter Author Name:" FontSize="20" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox Text="{Binding AuthorStr,Mode=TwoWay}"  Grid.Row="1"/>
+
+        <TextBlock Text="Enter Price Before Discount:" FontSize="20" VerticalAlignment="Center" Grid.Row="2"/>
+        <TextBox Text="{Binding PriceBeforeDiscountStr,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"  Grid.Row="2"/>
+
+        <TextBlock Text= "    Enter Discount Percentage:" FontSize="20" VerticalAlignment="Center" Grid.Column="1"/>
+        <TextBox Text="{Binding DiscountPercentageStr,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox" Grid.Column="1"/>
+
+        <TextBlock Text="    Enter Publish Date:" FontSize="20" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+        <DatePicker  DisplayDateEnd="{Binding PublishDate}" SelectedDate="{Binding PublishDate ,Mode=TwoWay}" Width="150" Height="100" Grid.Row="2" Grid.Column="1"></DatePicker>
+
+
+        <TextBlock Text="    Select Genres (Maximum 3):" FontSize="20" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <ListBox  SelectionMode="Multiple" VerticalAlignment="Center" HorizontalAlignment="Right" Width="250" Height="150" Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" >
+            <CheckBox Content="ActionAndAdventure" IsChecked="{Binding CategoriesCollection[0],Mode=TwoWay}" />
+            <CheckBox Content="Classics" IsChecked="{Binding CategoriesCollection[1],Mode=TwoWay}"  />
+            <CheckBox Content="Comic" IsChecked="{Binding CategoriesCollection[2],Mode=TwoWay}" />
+            <CheckBox Content="Detective" IsChecked="{Binding CategoriesCollection[3],Mode=TwoWay}" />
+            <CheckBox Content="Fantasy" IsChecked="{Binding CategoriesCollection[4],Mode=TwoWay}" />
+            <CheckBox Content="HistoricalFiction" IsChecked="{Binding CategoriesCollection[5],Mode=TwoWay}" />
+            <CheckBox Content="Horror" IsChecked="{Binding CategoriesCollection[6],Mode=TwoWay}" />
+            <CheckBox Content="LiteraryFiction" IsChecked="{Binding CategoriesCollection[7],Mode=TwoWay}" />
+        </ListBox>
+
+        <Button Content="Add Book" Grid.Row="5" Grid.ColumnSpan="2"  Command="{Binding AddBookClickCommand}" />
+
+    </Grid>
+</UserControl>

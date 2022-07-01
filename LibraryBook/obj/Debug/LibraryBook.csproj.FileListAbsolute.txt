@@ -1,0 +1,17 @@
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\LibraryBook.dll
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\LibraryBook.pdb
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.csproj.AssemblyReference.cache
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.csproj.CoreCompileInputs.cache
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.dll
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.pdb
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\DS.dll
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\DS.pdb
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.csproj.CopyComplete
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\LibraryBook.dll.config
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\EntityFramework.dll
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\EntityFramework.xml
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.Migrations.initilaize_model.resources
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.csproj.GenerateResource.cache
+C:\Users\omerb\OneDrive\שולחן העבודה\OOP Project\OopProject\LibraryBook\obj\Debug\LibraryBook.Migrations.EmployeeAndCustomerUpdate.resources

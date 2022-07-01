@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="OopProject.Views.RegisterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OopProject.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             
+             DataContext="{Binding Source={StaticResource Locator}, Path= Register}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Nickame" FontSize="20" VerticalAlignment="Center" />
+        <TextBox Text="{Binding NicknameStr,Mode=TwoWay}"  HorizontalAlignment="Center"  />
+
+        <TextBlock Text="Password" FontSize="20" VerticalAlignment="Center" Grid.Row="1" />
+        <TextBox Text="{Binding PasswordStr,Mode=TwoWay}"  HorizontalAlignment="Center" Grid.Row="1" />
+
+        
+        <RadioButton Content="Employee" IsChecked="{Binding IsSelected[0]}"  Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100"></RadioButton>
+        <RadioButton Content="Customer" IsChecked="{Binding IsSelected[1]}"  Grid.Row="2" VerticalAlignment="Center"  HorizontalAlignment="Left" Width="100"></RadioButton>
+        <Button Content="Register"  Grid.Row="3" Grid.ColumnSpan="2" Command="{Binding JoinClickCommand}"/>
+    </Grid>
+</UserControl>
