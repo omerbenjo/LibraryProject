@@ -40,7 +40,7 @@ namespace OopProject.ViewModel
         public bool[] CategoriesCollection
         {
             get { return categoriesCollection; }
-            set { categoriesCollection = value; }
+            set => Set(ref categoriesCollection , value);
         }
         #endregion
         public RelayCommand AddRecordClickCommand { get; set; }
@@ -58,15 +58,22 @@ namespace OopProject.ViewModel
             isAdd = LogicManager.manager.AddItem(recordType, nameStr, authorStr, priceBeforeDiscount, publishDate, discountPercentage,vs);
             if (isAdd)
             {
-                RecordIdStr = default;
-                NameStr = default;
-                AuthorStr = default;
-                PriceBeforeDiscountStr = default;
-                DiscountPercentageStr = default;
-                PublishDate = DateTime.Now;
+                Reset();
             }
             return;
         }
+
+        private void Reset()
+        {
+            RecordIdStr = default;
+            NameStr = default;
+            AuthorStr = default;
+            PriceBeforeDiscountStr = default;
+            DiscountPercentageStr = default;
+            PublishDate = DateTime.Now;
+            CategoriesCollection = new bool[7];
+        }
+
         private void ParseString(string isbnStr, string priceBeforeDiscountStr, string discountPercentageStr, out int isbnInt, out double priceBeforeDiscountInt, out int discountPercentageInt)
         {
             int.TryParse(isbnStr, out isbnInt);

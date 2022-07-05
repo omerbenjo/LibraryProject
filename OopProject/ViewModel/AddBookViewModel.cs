@@ -36,7 +36,7 @@ namespace OopProject.ViewModel
         public bool[] CategoriesCollection
         {
             get { return categoriesCollection; }
-            set { categoriesCollection = value; }
+            set =>  Set(ref categoriesCollection , value); 
         }
         #endregion
         public RelayCommand AddBookClickCommand { get; set; }
@@ -52,23 +52,20 @@ namespace OopProject.ViewModel
             bookType = LogicManager.manager.CreateBookTypeList(vs);
             ParseString(isbnStr, priceBeforeDiscountStr, discountPercentageStr, out int isbn, out double priceBeforeDiscount, out int discountPercentage);
             isAdd = LogicManager.manager.AddItem(bookType, nameStr, authorStr, priceBeforeDiscount, publishDate, discountPercentage, vs);
-            if (isAdd)
-            {
-                IsbnStr = default;
-                NameStr = default;
-                AuthorStr = default;
-                PriceBeforeDiscountStr = default;
-                DiscountPercentageStr = default;
-                PublishDate = DateTime.Now;
-                for (int i = 0; i < CategoriesCollection.Length; i++)
-                {
-                    CategoriesCollection[i] = false;
-                }
-            }
+            if (isAdd) Reset();
             return;
 
         }
-
+        private void Reset()
+        {
+            IsbnStr = default;
+            NameStr = default;
+            AuthorStr = default;
+            PriceBeforeDiscountStr = default;
+            DiscountPercentageStr = default;
+            PublishDate = DateTime.Now;
+            CategoriesCollection = new bool[8];
+        }
         private void ParseString(string isbnStr, string priceBeforeDiscountStr, string discountPercentageStr, out int isbnInt, out double priceBeforeDiscountInt, out int discountPercentageInt)
         {
             int.TryParse(isbnStr, out isbnInt);

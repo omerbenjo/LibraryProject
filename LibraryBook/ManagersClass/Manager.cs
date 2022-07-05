@@ -34,7 +34,7 @@ namespace LibraryBook.Collection
             Context = new LibraryBookContext();
             instance = SqlProviderServices.Instance;
         }
-        public bool AddItem(BookType bookType, string nameStr, string authorStr, double priceBeforeDiscount, DateTime publishDate,  int discountPercentage, bool[] vs)
+        public bool AddItem(BookType bookType, string nameStr, string authorStr, double priceBeforeDiscount, DateTime publishDate, int discountPercentage, bool[] vs)
         {
             Book book = new Book
             {
@@ -49,7 +49,7 @@ namespace LibraryBook.Collection
             bool isSucceed = itemManage.AddItem(inotifyAble, Context, book, vs);
             return isSucceed;
         }
-        public bool AddItem(RecordType recordrType, string nameStr, string authorStr, double priceBeforeDiscount, DateTime publishDate,  int discountPercentage, bool[] vs)
+        public bool AddItem(RecordType recordrType, string nameStr, string authorStr, double priceBeforeDiscount, DateTime publishDate, int discountPercentage, bool[] vs)
         {
             Record record = new Record
             {
@@ -160,6 +160,10 @@ namespace LibraryBook.Collection
             }
             return recordType;
         }
+        public Task<int> LoginAsync(string name, string password) => Task.Run(() => Login(name, password));
+
+
+
         public int Login(string name, string password)
         {
             string employee = null;
@@ -258,6 +262,8 @@ namespace LibraryBook.Collection
 
 
         }
+
+        public Task AddPersonAsync(string password, string name, bool[] isSelected) => Task.Run(() => AddPerson(password, name, isSelected));
         public void AddPerson(string password, string name, bool[] isSelected) => empAndCustManager.AddPerson(inotifyAble, password, name, isSelected);
     }
 }

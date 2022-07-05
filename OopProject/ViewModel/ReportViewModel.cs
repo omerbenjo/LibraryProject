@@ -28,8 +28,10 @@ namespace OopProject.ViewModel
         public string PriceBeforeDiscountStr { get => priceBeforeDiscountStr; set => Set(ref priceBeforeDiscountStr, value); }
 
         private string discountPercentageStr;
+        private bool[] isSelected = new bool[3];
+
         public string DiscountPercentageStr { get => discountPercentageStr; set => Set(ref discountPercentageStr, value); }
-        public bool[] IsSelected { get; set; } = new bool[3];
+        public bool[] IsSelected { get => isSelected; set => Set(ref isSelected, value); } 
         #endregion
         public RelayCommand ShowItemClickCommand { get; set; }
         public RelayCommand ShowReportClickCommand { get; set; }
@@ -58,7 +60,9 @@ namespace OopProject.ViewModel
             using (LibraryBookContext data = new LibraryBookContext())
             {
                 AbstractItem item = data.AbstractItems.First(x => x.Id == CurrentItem.Id);
-                string message = $"Id: {item.Id}\nName: {item.ItemName}\nCreator Name: {item.AuthorName}\nPrice Before Discount: {item.ItemPrice}\nDiscount Percentage: {item.Discount}%\nPrice After Discount:{item.PriceAfterDiscount} Published At: {item.PublicationDate}";
+                string message = $"Id: {item.Id}\nName: {item.ItemName}\nCreator Name: {item.AuthorName}\nPrice Before Discount:" +
+                    $" {item.ItemPrice}\nDiscount Percentage: {item.Discount}%\nPrice After Discount:{item.PriceAfterDiscount}" +
+                    $" Published At: {item.PublicationDate}";
                 MessageBox.Show(message, "Item Details");
             }
         }

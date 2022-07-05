@@ -24,10 +24,10 @@ namespace OopProject.ViewModel
             LogicManager.manager = new Manager(inotify);
             LoginClickCommand = new RelayCommand(LoginValidation);
         }
-        private void LoginValidation()
+        private async void LoginValidation()
         {
             int num;
-            num = LogicManager.manager.Login(NicknameStr, PasswordStr);
+            num = await LogicManager.manager.LoginAsync(NicknameStr, PasswordStr);
             if (num == 1)
             {
                 MainWindow mainWindow = new MainWindow();

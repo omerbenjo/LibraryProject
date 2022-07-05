@@ -17,17 +17,29 @@ namespace OopProject.ViewModel
         public string PasswordStr { get => passwordStr; set => Set(ref passwordStr, value); }
 
         private string nicknameStr;
+        private bool[] isSelected = new bool[2];
+
         public string NicknameStr { get => nicknameStr; set => Set(ref nicknameStr, value); }
-        public bool[] IsSelected { get; set; } = new bool[2];
+        public bool[] IsSelected { get => isSelected; set => Set(ref isSelected , value); }
 
         public RelayCommand JoinClickCommand { get; set; }
         public RegisterViewModel() => JoinClickCommand = new RelayCommand(JoinClick);
 
-        private  void JoinClick()
+        private async void JoinClick()
         {
-            LogicManager.manager.AddPerson(PasswordStr, NicknameStr, IsSelected);
+            var n = NicknameStr;
+            var p = PasswordStr;
+            var s = IsSelected;
+            Reset();
+
+            await LogicManager.manager.AddPersonAsync(p, n, s);
+        }
+
+        private void Reset()
+        {
             NicknameStr = "";
             PasswordStr = "";
+            IsSelected = new bool[2];
         }
     }
 }
